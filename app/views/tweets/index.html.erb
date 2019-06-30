@@ -1,0 +1,9 @@
+<%= javascript_include_tag "application" %>
+
+  <div class="contents row" >
+  <p class="clock" id="RealtimeClockArea">※ここに時計が表示されます。</p>
+    <% @tweets.each do |tweet| %>
+        <%= render partial: "tweet", locals: { tweet: tweet } %>
+    <% end %>
+    <%= paginate(@tweets) %>
+  </div>

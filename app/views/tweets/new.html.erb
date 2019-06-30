@@ -1,0 +1,15 @@
+<%= javascript_include_tag "application" %>
+
+<div class="contents row">
+  <div class="container">
+    <%= form_tag('/tweets', method: :post) do %>
+      <h3>
+        投稿する
+      </h3>
+      <input placeholder="Image Url" type="text" name="image">
+      <textarea cols="30" name="text" placeholder="text" rows="10" id="input-text"></textarea>
+      <p id="counter">0文字</p>
+      <input type="submit" value="SENT">
+    <% end %>
+  </div>
+</div>

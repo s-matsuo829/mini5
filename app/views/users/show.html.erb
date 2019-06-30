@@ -1,0 +1,8 @@
+<div class="contents row">
+  <p><%= @nickname %>さんの投稿一覧</p>
+  合計<%= @posts %> 個の投稿。ご利用いただきありがとうございます。
+  <% @tweets.each do |tweet| %>
+    <%= render partial: "tweets/tweet", locals: { tweet: tweet } %>
+  <% end %>
+  <%= paginate(@tweets) %>
+</div>
